@@ -16,12 +16,11 @@
 ---
 
 ## ⚡ Szybkie Pobieranie (Direct Downloads)
+
 Wgraj gotowe oprogramowanie bez konieczności kompilacji kodu:
-
-* 📥 **[Pobierz Firmware dla OLED 2.42" (SPI)](firmware/Prop_Tool_by.SQ7UTP_Oled2.42.bin)**
-* 📥 **[Pobierz Firmware dla OLED 1.3" (I2C)](firmware/Prop_Tool_by.SQ7UTP_Oled1.3.bin)**
-* 🛠️ **[Pobierz Narzędzie Flashujące (NodeMCU PyFlasher)](tools/NodeMCU-PyFlasher.rar)**
-
+* 📥 **[Pobierz Firmware dla OLED 2.42" (SPI)](firmware/Prop_Tool_by.SQ7UTP_Oled2.42.bin?raw=true)**
+* 📥 **[Pobierz Firmware dla OLED 1.3" (I2C)](firmware/Prop_Tool_by.SQ7UTP_Oled1.3.bin?raw=true)**
+* 🛠️ **[Pobierz Narzędzie Flashujące (NodeMCU PyFlasher)](tools/NodeMCU-PyFlasher.rar?raw=true)**
 ---
 
 ## 🌟 Główne Funkcje Systemu
