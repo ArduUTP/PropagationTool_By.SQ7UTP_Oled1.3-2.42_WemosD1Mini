@@ -16,12 +16,11 @@
 ---
 
 ## ⚡ Szybkie Pobieranie (Direct Downloads)
+
 Wgraj gotowe oprogramowanie bez konieczności kompilacji kodu:
-
-* 📥 **[Pobierz Firmware dla OLED 2.42" (SPI)](firmware/Prop_Tool_by.SQ7UTP_Oled2.42.bin)**
-* 📥 **[Pobierz Firmware dla OLED 1.3" (I2C)](firmware/Prop_Tool_by.SQ7UTP_Oled1.3.bin)**
-* 🛠️ **[Pobierz Narzędzie Flashujące (NodeMCU PyFlasher)](tools/NodeMCU-PyFlasher.rar)**
-
+* 📥 **[Pobierz Firmware dla OLED 2.42" (SPI)](https://github.com/ArduUTP/PropagationTool_By.SQ7UTP_Oled1.3-2.42_WemosD1Mini/raw/refs/heads/main/firmware/Prop_Tool_by.SQ7UTP_Oled2.42.bin)**
+* 📥 **[Pobierz Firmware dla OLED 1.3" (I2C)](https://github.com/ArduUTP/PropagationTool_By.SQ7UTP_Oled1.3-2.42_WemosD1Mini/raw/refs/heads/main/firmware/Prop_Tool_by.SQ7UTP_Oled1.3.bin)**
+* 🛠️ **[Pobierz Narzędzie Flashujące (NodeMCU PyFlasher)](https://github.com/ArduUTP/PropagationTool_By.SQ7UTP_Oled1.3-2.42_WemosD1Mini/raw/refs/heads/main/tools/NodeMCU-PyFlasher.rar)**
 ---
 
 ## 🌟 Główne Funkcje Systemu
@@ -88,7 +87,7 @@ Użyj dołączonego narzędzia **NodeMCU PyFlasher**:
 ### 🔑 Uzyskiwanie kluczy API (Ważne!)
 Do poprawnego działania stacji niezbędne jest posiadanie własnych kluczy API. Rejestracja w obu serwisach jest darmowa dla użytkowników indywidualnych:
 * **OpenWeatherMap:** Załóż konto na [openweathermap.org](https://openweathermap.org/), aby uzyskać klucz do danych pogodowych.
-* **Burze.dzis.net:** Zarejestruj się na [burze.dzis.net/api.php](https://burze.dzis.net/api.php), aby otrzymać klucz API do obsługi radaru.
+* **Burze.dzis.net:** Zarejestruj się na [burze.dzis.net/api.php](https://burze.dzis.net/?page=api_interfejs), aby otrzymać klucz API do obsługi radaru.
 
 **UWAGA:** Po wygenerowaniu nowego klucza API w powyższych serwisach, należy **odczekać około 1 godziny**, zanim klucz stanie się aktywny w ich systemach. Jeśli stacja wyświetla błąd autoryzacji tuż po konfiguracji, poczekaj cierpliwie – jest to wymóg serwerów dostawców danych, a nie błąd programu.
 
