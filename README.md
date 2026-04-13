@@ -5,7 +5,7 @@
 ![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-orange.svg)
 
 <p align="center">
-  <img src="img/logo.jpg" width="600" alt="Ham Propagation Tool Logo">
+  <img src="img/gif.gif" width="600" alt="Ham Propagation Tool Logo">
 </p>
 
 **Ham Propagation Tool** to zaawansowana stacja monitorująca warunki radiowe, pogodę oraz wyładowania atmosferyczne, dedykowana dla krótkofalowców. Urządzenie zostało zaprojektowane tak, aby w estetyczny sposób prezentować kluczowe dane z wielu niezależnych serwisów (HamQSL, OpenWeatherMap, Burze.dzis.net) na wyświetlaczach OLED.
