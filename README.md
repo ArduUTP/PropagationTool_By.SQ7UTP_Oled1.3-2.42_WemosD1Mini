@@ -1,7 +1,7 @@
 # Ham Propagation Tool By SQ7UTP 📡 (Wemos D1 Mini + OLED)
 
 ![License: GPL v3](https://img.shields.io/badge/License-Code%3A_GPLv3-blue.svg)
-![Version: 3.0](https://img.shields.io/badge/Version-3.0-brightgreen.svg)
+![Version: 3.2](https://img.shields.io/badge/Version-3.2-brightgreen.svg)
 ![Platform: ESP8266](https://img.shields.io/badge/Platform-ESP8266-orange.svg)
 
 <p align="center">
@@ -15,12 +15,22 @@
 
 ---
 
+## 🚀 Co nowego w wersji 3.2? (Changelog)
+Najnowsza aktualizacja zamienia stację z fajnego gadżetu w profesjonalne, niezawodne narzędzie klasy premium:
+* 🌐 **Dwujęzyczny Interfejs (PL / EN):** Pełne tłumaczenie "w locie" na język angielski. Wybór dostępny w menu WiFi oraz panelu WWW (domyślnie po aktualizacji włącza się język polski, by nie sprawić kłopotów obecnym użytkownikom).
+* 🧠 **Ekstremalna Optymalizacja RAM (Zero Crash):** Wdrożono kompresję buforów SSL oraz strumieniowe dekodowanie (Streaming JSON) potężnych pakietów pogody prosto z modułu WiFi. Eliminuje to wszelkie błędy struktury danych i słynne restarty *Exception 29 (OOM)*.
+* 🌍 **Globalny Radar Burz (Konwerter Koordynatów):** Stacja potrafi teraz "w locie" przeliczać nowoczesne stopnie dziesiętne (DD) na starodawny format stopni i minut (DM). Dzięki temu radar burzowy przyjmuje dokładne koordynaty z każdego miejsca na świecie!
+* ⏳ **Synchronizacja i Pasek Ładowania:** Cykle pobierania danych z 3 różnych serwerów zostały perfekcyjnie zsynchronizowane. Stacja co 3 minuty płynnie wygasza ekrany i wyświetla elegancki, pełnoekranowy pasek ładowania asynchronicznego pobierania, zapobiegając "zamarzaniu" animacji na OLED.
+
+---
+
 ## ⚡ Szybkie Pobieranie (Direct Downloads)
 
 Wgraj gotowe oprogramowanie bez konieczności kompilacji kodu:
 * 📥 **[Pobierz Firmware dla OLED 2.42" (SPI)](https://github.com/ArduUTP/PropagationTool_By.SQ7UTP_Oled1.3-2.42_WemosD1Mini/raw/refs/heads/main/firmware/Prop_Tool_by.SQ7UTP_Oled2.42.bin)**
 * 📥 **[Pobierz Firmware dla OLED 1.3" (I2C)](https://github.com/ArduUTP/PropagationTool_By.SQ7UTP_Oled1.3-2.42_WemosD1Mini/raw/refs/heads/main/firmware/Prop_Tool_by.SQ7UTP_Oled1.3.bin)**
 * 🛠️ **[Pobierz Narzędzie Flashujące (NodeMCU PyFlasher)](https://github.com/ArduUTP/PropagationTool_By.SQ7UTP_Oled1.3-2.42_WemosD1Mini/raw/refs/heads/main/tools/NodeMCU-PyFlasher.rar)**
+
 ---
 
 ## 🌟 Główne Funkcje Systemu
@@ -28,9 +38,9 @@ Wgraj gotowe oprogramowanie bez konieczności kompilacji kodu:
 * **Monitoring Propagacji:** Pełne dane SFI, Sunspots, A/K-Index oraz stan pasm HF (Dzień/Noc).
 * **Radar Burzowy (Real-Time):** Integracja z systemem Burze.dzis.net. W przypadku wykrycia wyładowań, system przechodzi w tryb alarmowy (miganie ekranu, dane o dystansie i kierunku).
 * **Lokalna Pogoda:** Aktualne dane meteo z serwisu OpenWeatherMap.
-* **Web Dashboard:** Nowoczesny, ciemny panel sterowania dostępny pod adresem IP urządzenia w sieci lokalnej.
-* **Aktualizacje OTA:** Urządzenie potrafi samodzielnie pobrać nowszą wersję softu bezpośrednio z tego repozytorium GitHub.
-* **WiFi Manager:** Prosta konfiguracja przy pierwszym uruchomieniu przez telefon.
+* **Web Dashboard:** Nowoczesny, ciemny panel sterowania dostępny pod adresem IP urządzenia w sieci lokalnej. Umożliwia zmianę języka, koordynatów i kluczy API "w locie".
+* **Aktualizacje OTA:** Urządzenie potrafi samodzielnie pobrać nowszą wersję softu bezpośrednio z tego repozytorium GitHub bez konieczności podpinania kabla.
+* **WiFi Manager:** Prosta konfiguracja przy pierwszym uruchomieniu przez telefon w trybie Captive Portal.
 
 ---
 
@@ -78,11 +88,11 @@ Użyj dołączonego narzędzia **NodeMCU PyFlasher**:
 
 ## ⚙️ Pierwsze Uruchomienie i Konfiguracja
 
-1. Po wgraniu softu, na ekranie zobaczysz napis **BRAK SIECI**.
+1. Po wgraniu softu, na ekranie zobaczysz napis **BRAK SIECI** (lub *No connection*).
 2. Na telefonie połącz się z siecią WiFi o nazwie **HAM_TOOL**.
 3. Powinna otworzyć się strona konfiguracyjna (jeśli nie, wejdź na `192.168.4.1`).
 4. Wybierz swoją sieć WiFi i wpisz hasło.
-5. Podaj klucze API oraz współrzędne (Lat/Lon). Zapisz - urządzenie zrestartuje się.
+5. Podaj klucze API, współrzędne (Lat/Lon) i wybierz język. Zapisz - urządzenie zrestartuje się i zacznie pobierać dane.
 
 ### 🔑 Uzyskiwanie kluczy API (Ważne!)
 Do poprawnego działania stacji niezbędne jest posiadanie własnych kluczy API. Rejestracja w obu serwisach jest darmowa dla użytkowników indywidualnych:
@@ -127,7 +137,7 @@ Do poprawnego działania stacji niezbędne jest posiadanie własnych kluczy API.
 
 ## 🌐 Web Panel (Zarządzanie przez WWW)
 
-Wpisz adres IP urządzenia w przeglądarce, aby uzyskać dostęp do panelu. Pozwala on na zmianę kluczy API oraz zdalny reset WiFi.
+Wpisz adres IP urządzenia w przeglądarce, aby uzyskać dostęp do panelu. Pozwala on na zmianę kluczy API, zarządzanie językiem oraz zdalny reset WiFi.
 
 <p align="center">
   <img src="img/webconf.jpg" width="32%" alt="Panel Web">
